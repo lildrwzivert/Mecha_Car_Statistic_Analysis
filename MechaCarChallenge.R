@@ -8,7 +8,7 @@ library(tidyverse)
 mecha_car_mpg_table <- read.csv(file = 'Data/MechaCar_mpg.csv', check.names = F, stringsAsFactors = F)
 head(mecha_car_mpg_table)
 
-#perform linear regression with 6 variables
+# perform linear regression with 6 variables
 lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_car_mpg_table)
 
 # using summary function, determine p-val and r-squared value
@@ -40,7 +40,7 @@ lot_summary <- suspension_coil_table %>% group_by(Manufacturing_Lot) %>% summari
 
 # DELIVERABLE 3
 
-# use a t test to determine if the PSI across manufacturing lots is different than the pop mean of 1500 lbs per sq in
+# use a t test to determine if the PSI across manufacturing lots is different than the pop mean of 1500 lbs per sq. in
 t.test(suspension_coil_table$PSI, mu=1500)
 
 # use 3 tests to test if each lot has a PSI that is different than the pop mean of 1500 lbs per sq in
